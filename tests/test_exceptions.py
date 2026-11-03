@@ -39,7 +39,7 @@ class TestRedisClusterException:
     def test_sets_error_type_and_args(self):
         err = RedisClusterException("boom")
         assert err.args == ("boom",)
-        assert repr(err) == "server:RedisClusterException"
+        assert repr(err) == "server:RedisClusterException(boom)"
 
     def test_subclasses_construct(self):
         assert SlotNotCoveredError("no node covers slot").args == (
