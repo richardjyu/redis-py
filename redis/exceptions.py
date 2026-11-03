@@ -17,7 +17,7 @@ class RedisError(Exception):
         self.status_code = status_code
 
     def __repr__(self):
-        return f"{self.error_type.value}:{self.__class__.__name__}"
+        return f"{self.error_type.value}:{self.__class__.__name__}({self.status_code})"
 
 
 class ConnectionError(RedisError):
